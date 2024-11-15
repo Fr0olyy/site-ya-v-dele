@@ -1,0 +1,183 @@
+.main__text {
+    margin-top: 100px;
+    height: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.main__tit {
+    font-family: RobotoL, sans-serif;
+    font-size: 35px;
+    width: 35%;
+    margin-right: 120px;
+    line-height: 50px;
+}
+.main__info {
+    font-family: RobotoL, sans-serif;
+    font-size: 18px;
+    width: 50%;
+    line-height: 28px;
+}
+.main__try {
+    margin-top: 20px;
+}
+
+.main__stats {
+    margin-top: 120px;
+    background: rgb(227,105,16);
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 34px;
+    border-radius: 10px;
+    margin-bottom: 200px;
+}
+.main__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main__menu li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 280px;
+    text-align: center;
+    color: white;
+}
+.main__title {
+    font-family: RobotoM, sans-serif;
+    font-size: 40px;
+}
+.main__subtitle {
+    font-family: RobotoT, sans-serif;
+    font-size: 22px
+}
+.main__menu div {
+    margin-bottom: 15px;
+}
+.main__content {
+    background: rgb(227,105,16);
+    padding-top: 100px;
+    padding-bottom: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.first__content {
+    width: 35%;
+    margin-right: 120px;
+    display: inline-block;
+}
+.second__content {
+    width: 55%; 
+    display: inline-block;
+}
+.content__title {
+    color: white;
+    font-family: RobotoM, sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.content__subtitle {
+    color: white;
+    font-family: RobotoT, sans-serif;
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 150px; 
+}
+.card__button {
+    height: 300px;
+}
+.card {
+    background: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+}
+.card__image img {
+    width: 35px;
+    margin-bottom: 24px;
+}
+.card__title {
+    margin-bottom: 16px;
+    font-family: RobotoM, sans-serif;
+    font-size: 24px;
+}
+.card__subtitle {
+    font-family: RobotoL, sans-serif;
+    font-size: 20px;
+}
+.reviews {
+    background: #FDF3EC;
+}
+.block__reviews {
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom:50px;
+    padding-top: 50px;
+}
+.review__up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review__down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review img {
+    width: 80px;
+    height: 60px;
+    border-radius: 100%;
+}
+.review__text {
+    width: 40%;
+    margin-right: 92px;
+}
+.review {
+    width: 40%;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.review__title {
+    font-family: RobotoL, sans-serif;
+    font-size: 38px;
+    line-height: 60px;
+}
+.review__subtitle {
+    font-family: RobotoL;
+    font-size: 18px;
+}
+.review__comment {
+    font-family: RobotoL, sans-serif;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    justify-items: center;
+    text-align: center;
+}
+.review__name {
+    font-family: RobotoM, sans-serif;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.review__proffesion {
+    font-family: RobotoL, sans-serif;
+    font-size: 16px;
+}
