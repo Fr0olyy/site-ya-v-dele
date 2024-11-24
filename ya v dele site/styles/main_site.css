@@ -1,0 +1,521 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-menu {
+    background-color: #69a1d5;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main-menu li {
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .main-menu .active {
+    background-color: #2786ca;
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 20px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  #chat .chat-container {
+    display: flex;
+    height: 87vh;
+  }
+  
+  .chat-users {
+    width: 20%;
+    background-color: #f4f4f4;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .chat-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-header {
+    background-color: #ddd;
+    padding: 10px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-card {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* General styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd;
+    color: #333;
+  }
+  
+  header {
+    background-color: #0288d1;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #03a9f4;
+    padding: 0.8rem;
+  }
+  
+  nav .tab {
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav .tab:hover,
+  nav .tab.active {
+    background-color: #0288d1;
+    transform: scale(1.05);
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 10px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  #profileForm,
+  #profileDisplay {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #profileForm input,
+  #profileForm select,
+  #profileForm textarea,
+  #profileForm button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #profileForm button,
+  #profileDisplay button {
+    background-color: #0288d1;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  
+  #profileForm button:hover,
+  #profileDisplay button:hover {
+    background-color: #0277bd;
+  }
+  .profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+  .profile-info {
+    flex: 0.6;
+  }
+  
+  #profileDisplay {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #profileDisplay p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  /* Chat tab */
+  #chatContainer {
+    display: flex;
+    height: calc(100vh - 150px);
+    background-color: #e1f5fe;
+  }
+  
+  #userList {
+    flex: 1;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #userList .user-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #userList .user-item:hover {
+    background-color: #f1f8ff;
+  }
+  
+  #userList img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  #chatArea {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+  
+  #chatWith {
+    padding: 1rem;
+    background-color: #0288d1;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  #chatMessages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #e3f2fd;
+  }
+  
+  #chatMessages .message {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  #chatInputArea {
+    display: flex;
+    padding: 1rem;
+    background-color: #f0f4f8;
+    border-top: 1px solid #ddd;
+  }
+  
+  #chatInput {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #sendMessage {
+    padding: 1rem 1.5rem;
+    margin-left: 1rem;
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #sendMessage:hover {
+    background-color: #0277bd;
+  }
+  
+  
+  
+  
+  /* Общий стиль */
+  #events {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Секция поиска */
+  .search-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+  
+  .search-section input,
+  .search-section select,
+  .search-section button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-section button {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-section button:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Секция "События от нас" */
+  .our-events {
+    margin-bottom: 2rem;
+  }
+  
+  .our-events h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0288d1;
+    font-size: 30px;
+  }
+  
+  .our-events-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    height: 35vh;
+  }
+  
+  .event-card {
+    width: 350px;
+    text-align: center;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .event-card img {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-card h4 {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  .event-card p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Секция "События от других пользователей" */
+  .user-events h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0288d1;
+  }
+  
+  #userEventsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .user-event {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  
+  
+  #neural-network {
+    padding: 20px;
+  }
+  #neuralForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #neuralForm label {
+    margin-bottom: 5px;
+  }
+  #neuralForm input {
+    width: 200px;
+    height: 15px;
+    margin-bottom: 10px;
+  }
+  #neuralForm button {
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+  }
+  #neuralForm button:hover {
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+  }
+  #match-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+  }
+  
+  #match-form label {
+    font-weight: bold;
+  }
+  
+  #match-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #find-match {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #find-match:hover {
+    background-color: #0056b3;
+  }
+  
+  #match-result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .neural__vse {
+    display: flex;
+  }
+  #matchResult {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 0px solid #1edffd;
+    border-radius: 20px;
+  }
+  #matchResult p {
+    margin-top: 0px; 
+  }
+  
+  

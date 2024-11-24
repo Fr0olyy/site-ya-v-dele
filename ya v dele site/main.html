@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Site</title>
+    <link rel="stylesheet" href="styles/main_site.css">
+</head>
+<body>
+    <div class="main-menu">
+        <ul>
+            <li class="tab active" data-tab="profile">Профиль</li>
+            <li class="tab" data-tab="events">События</li>
+            <li class="tab" data-tab="chat">Чат</li>
+            <li class="tab" data-tab="search-people">Поиск людей</li>
+            <li class="tab" data-tab="neural-networks">Наша нейросеть</li>
+        </ul>
+    </div>
+
+    <div id="profile" class="tab-content">
+        <div id="profileForm">
+          <h2>Заполнение профиля</h2>
+          <label for="firstName">Имя</label>
+          <input type="text" id="firstName" placeholder="Введите имя" />
+          <label for="lastName">Фамилия</label>
+          <input type="text" id="lastName" placeholder="Введите фамилию" />
+          <label for="patronymic">Отчество</label>
+          <input type="text" id="patronymic" placeholder="Введите отчество" />
+          <label for="gender">Пол</label>
+          <select id="gender">
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+          </select>
+          <label for="about">О себе</label>
+          <textarea id="about" placeholder="Напишите о себе"></textarea>
+          <label for="photo">Загрузить фотографию</label>
+          <input type="file" id="photo" accept="image/*" />
+          <button id="saveProfile">Сохранить профиль</button>
+        </div>
+      
+        <div id="profileDisplay" style="display: none;">
+          <h2>Ваш профиль</h2>
+          <div class="profile-container">
+            <div class="profile-photo">
+              <img id="displayPhoto" src="" alt="Фотография" />
+            </div>
+            <div class="profile-info">
+              <p><strong>Имя:</strong> <span id="displayFirstName"></span></p>
+              <p><strong>Фамилия:</strong> <span id="displayLastName"></span></p>
+              <p><strong>Отчество:</strong> <span id="displayPatronymic"></span></p>
+              <p><strong>Пол:</strong> <span id="displayGender"></span></p>
+              <p><strong>О себе:</strong> <span id="displayAbout"></span></p>
+            </div>
+          </div>
+          <button id="editProfile">Редактировать профиль</button>
+        </div>
+      </div>
+
+      <div id="events" class="tab-content"> 
+      
+      
+        <!-- Секция "События от нас" -->
+        <div class="our-events">
+          <h3>События от нас</h3>
+          <div class="our-events-list">
+            <div class="event-card">
+              <img src="images/events/mafia.webp" alt="Мафия" />
+              <h4>Мафия</h4>
+              <p>Популярная психологическая игра.</p>
+            </div>
+            <div class="event-card">
+              <img src="images/events/birch.webp" alt="Кино вечер" />
+              <h4>Пляжная вечеринка</h4>
+              <p>Дневное мероприятие с кучей еды и бассейном</p>
+            </div>
+            <div class="event-card">
+              <img src="images/events/tyca.png" alt="Тренинг по лидерству" />
+              <h4>Вечеринка с секретным гостем</h4>
+              <p>Вечернее мероприятие, которое удивит любого</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Секция поиска -->
+        <div class="search-section">
+          <input type="text" id="eventSearch" placeholder="Поиск события" />
+          <select id="eventType">
+            <option value="">Тип события</option>
+            <option value="Развлекательное">Развлекательное</option>
+            <option value="Серьезное">Серьезное</option>
+          </select>
+          <select id="eventSize">
+            <option value="">Размер</option>
+            <option value="Маленькая группа (до 10 человек)">Маленькая группа (до 10 человек)</option>
+            <option value="Средняя группа (до 30 человек)">Средняя группа (до 30 человек)</option>
+            <option value="Большая группа (50+ человек)">Большая группа (50+ человек)</option>
+          </select>
+          <button id="findEvent">Найти</button>
+        </div>
+      
+        <!-- Секция "События от других пользователей" -->
+        <div class="user-events">
+          <h3>События от других пользователей</h3>
+          <div id="userEventsList">
+            <!-- Список событий, добавляемый через JS -->
+          </div>
+        </div>
+      </div>
+
+    <div class="tab-content" id="chat">
+        <div class="chat-container">
+            <ul id="userList" class="chat-users"></ul>
+            <div class="chat-main">
+                <div class="chat-header" id="chatWith">Выбери собеседника</div>
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Сообщение">
+                    <button id="sendMessage">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="search-people">
+        <h2>Поиск людей</h2>
+        <div id="profileCard" class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo">
+            <h3 id="cardName">Имя</h3>
+            <p id="cardAbout">О человеке</p>
+            <div class="card-actions">
+                <button id="dislikeButton">Дизлайк</button>
+                <button id="likeButton">Лайк</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="neural-networks"> 
+      <h2>Наша нейросеть</h2> 
+      <div class="neural__vse">
+        <form id="neuralForm"> 
+            <label for="hobbies">Увлечения:</label> 
+            <input type="text" id="hobbies" placeholder=""> 
+    
+            <label for="hairColor">Цвет волос:</label> 
+            <input type="text" id="hairColor" placeholder=""> 
+    
+            <label for="eyeColor">Цвет глаз:</label> 
+            <input type="text" id="eyeColor" placeholder=""> 
+    
+            <label for="height">Рост:</label> 
+            <input type="text" id="height" placeholder=""> 
+    
+            <label for="workPlace">Место работы/учёбы:</label> 
+            <input type="text" id="workPlace" placeholder=""> 
+    
+            <label for="age">Возраст:</label> 
+            <input type="text" id="age" placeholder=""> 
+    
+            <label for="habits">Вредные привычки:</label> 
+            <input type="text" id="habits" placeholder=""> 
+    
+            <button type="button" id="findMatch">Найти match</button> 
+        </form> 
+  
+        <div id="matchResult"></div> 
+      </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
